@@ -1,0 +1,19 @@
+{
+  "name": "longpoint-landing",
+  "version": "1.0.0",
+  "description": "Longpoint Minerals Landing Page",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karsh Hagan",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^1.5.4",
+    "gulp-watch": "^4.3.8",
+    "pump": "^1.0.1"
+  }
+}
