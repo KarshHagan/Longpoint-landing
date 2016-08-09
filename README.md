@@ -1,4 +1,6 @@
 npm install
 
 Start server, watch CSS + JS:
-*gulp
+gulp
+
+compress images: gulp smush

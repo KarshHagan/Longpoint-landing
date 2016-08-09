@@ -5,6 +5,7 @@ var gulp = require('gulp'),
     pump = require('pump'),
     sass = require('gulp-sass'),
     connect = require('gulp-connect'),
+    imagemin = require('gulp-imagemin'),
     watch = require('gulp-watch');
 
 // make vars for file paths
@@ -43,6 +44,13 @@ gulp.task('connect', function() {
 gulp.task('html', function() {
   gulp.src('**/*.html')
   .pipe(connect.reload())
+});
+
+// compress images
+gulp.task('smush', function() {
+  gulp.src('src/assets/images/*')
+  .pipe(imagemin())
+  .pipe(gulp.dest('build/images'))
 });
 
 // watch for changes in css and js then compile
