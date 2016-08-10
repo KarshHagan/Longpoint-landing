@@ -42,20 +42,37 @@
 }
 
 .word-bg {
-  background: url('/build/images/handshake.jpg') no-repeat fixed;
+  background: url('/build/images/handshake-mobile.jpg') no-repeat fixed;
   background-size: cover;
+  background-position: 25% top;
 
   img {
     display: block;
     width: 100%;
     height: 100%;
+    position: relative;
   }
 
 }
 
-.word-copy {
-  margin-top: -60px;
+// .word-copy {
+//   margin-top: -60px;
+//   background-color: $beige;
+// }
+
+.word-copy-wrap {
+  // background-color: $beige;
+  position: relative;
+  width: 100%;
+  margin-top: -19%;
+  z-index: 4;
   background-color: $beige;
+  // @media (min-width: 52em) {
+  //   position: absolute;
+  //   top: 69%;
+  //   left: 50%;
+  //   @include transform(translateX(-50%));
+  // }
 }
 
 .panel-two, .panel-three, .panel-four, .panel-five {
@@ -67,9 +84,10 @@
 }
 
 .panel-three {
-    background: url('/build/images/wedo.jpg') no-repeat;
+    background: url('/build/images/wedo-mobile.jpg') no-repeat;
     background-size: cover;
-    min-height: 500px;
+    background-position: center;
+    min-height: 600px;
 
     h2 {
       color: $white;

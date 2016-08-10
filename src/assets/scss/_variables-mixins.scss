@@ -7,3 +7,19 @@ $beige2: #d7ccc1;
 $link: #0077a8;
 $slate: #637e91;
 $contact-body-copy: #002539;
+
+@mixin transform($var...) {
+    -webkit-transform: $var;
+    -moz-transform: $var;
+    -ms-transform: $var;
+    -o-transform: $var;
+    transform: $var;
+}
+
+@mixin transition($var...){
+  -webkit-transition: $var;
+  -moz-transition: $var;
+  -ms-transition: $var;
+  -o-transition: $var;
+  transition: $var;
+}
