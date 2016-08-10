@@ -1,12 +1,13 @@
-$beige: #f0e3dd;
+$beige: #efe2dc;
 $white: #ffffff;
 $blue-gray: #686c71;
 $brown-gray: #3d3935;
-$caramel: #9f6f3b;
-$beige2: #d7ccc1;
-$link: #0077a8;
-$slate: #637e91;
+$caramel: #9d6f3c;
+$link: #0078a7;
+$hover: #00263a;
+$slate: #637f92;
 $contact-body-copy: #002539;
+$dot: #3d4b56;
 
 @mixin transform($var...) {
     -webkit-transform: $var;

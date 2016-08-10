@@ -1,10 +1,18 @@
 nav {
   position: fixed;
-  top: 33%;
+  top: 17%;
   left: 0;
+  z-index: 20;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
   li {
     text-transform: uppercase;
-    margin: 20px;
+    margin: 20px 10px;
+    cursor: pointer;
+    a {
+      color: #475760;
+      text-decoration: none;
+    }
   }
 }
 
@@ -13,12 +21,18 @@ nav {
   height: 17px;
   display: block;
   border-radius: 25px;
-  border: 3px solid gray;
+  border: 2px solid $dot;
   float: left;
   margin-right: 10px;
+  margin-top: 2px;
 }
 
 .active {
-  background-color: gray;
+  a {
+    color: $dot;
+  }
+  .dot {
+    background-color: $dot;
+  }
 }
 

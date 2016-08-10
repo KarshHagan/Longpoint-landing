@@ -17,7 +17,7 @@ h1, h2, h3 {
 a {
     color: $link;
     &:hover {
-        color: #01303f;
+        color: $hover;
     }
 }
 

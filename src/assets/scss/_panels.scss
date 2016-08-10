@@ -11,20 +11,9 @@
   background: linear-gradient(to bottom, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#637e92', endColorstr='#525960', GradientType=0 );
   color: $white;
-
-  // &:after {
-  //   content: '';
-  //   width: 50%;
-  //   height: 65px;
-  //   position: absolute;
-  //   right: 0;
-  //   background-color: $beige;
-  //   transform: rotate(-8.5deg);
-  //   bottom: 0px;
-  // }
 }
 
-.panel-two, .panel-three {
+.panel-two, .panel-three, .panel-five {
 
   &:after {
     content: '';
@@ -42,9 +31,14 @@
 }
 
 .word-bg {
-  background: url('/build/images/handshake-mobile.jpg') no-repeat fixed;
+  background-image: url('/build/images/handshake-mobile.jpg');
   background-size: cover;
   background-position: 25% top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  @media (min-width: 52em) {
+    background-image: url('/build/images/handshake2.jpg');
+  }
 
   img {
     display: block;
@@ -55,39 +49,30 @@
 
 }
 
-// .word-copy {
-//   margin-top: -60px;
-//   background-color: $beige;
-// }
-
 .word-copy-wrap {
-  // background-color: $beige;
   position: relative;
   width: 100%;
   margin-top: -19%;
   z-index: 4;
   background-color: $beige;
-  // @media (min-width: 52em) {
-  //   position: absolute;
-  //   top: 69%;
-  //   left: 50%;
-  //   @include transform(translateX(-50%));
-  // }
 }
 
 .panel-two, .panel-three, .panel-four, .panel-five {
     z-index: 3;
     background-color: beige;
-    @media (min-width: 62em) {
-      background-position-x: 180px;
-    }
 }
 
 .panel-three {
-    background: url('/build/images/wedo-mobile.jpg') no-repeat;
+  background-color: #73B4C6;
+  color: $white;
+  min-height: 600px;
+  padding-bottom: 7rem;
+  @media (min-width: 52em) {
+    background: url('/build/images/wedo.jpg') no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 600px;
+    min-height: 850px;
+  }
 
     h2 {
       color: $white;
@@ -104,7 +89,6 @@
       bottom: 0px;
       left: 0;
       width: 100%;
-      // background-image: url('/build/images/angles_3-01.png');
       background-repeat: no-repeat;
       background-size: 100% 100%;
       z-index: 4;
@@ -114,7 +98,7 @@
 }
 
 .panel-four {
-  background-color: $beige2;
+  background-color: $beige;
   color: $white;    
 }
 
@@ -122,6 +106,9 @@
   line-height: 1.5em;
   background-color: $white;
   color: $contact-body-copy;
+  &:after {
+    background-image: url('/build/images/angles_3-01.png');
+  }
   h2 {
     color: $slate;
   }
