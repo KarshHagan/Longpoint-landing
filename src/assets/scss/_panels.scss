@@ -11,6 +11,17 @@
   background: linear-gradient(to bottom, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#637e92', endColorstr='#525960', GradientType=0 );
   color: $white;
+
+  // &:after {
+  //   content: '';
+  //   width: 50%;
+  //   height: 65px;
+  //   position: absolute;
+  //   right: 0;
+  //   background-color: $beige;
+  //   transform: rotate(-8.5deg);
+  //   bottom: 0px;
+  // }
 }
 
 .panel-two, .panel-three {
@@ -21,16 +32,13 @@
     top: -93px;
     left: 0;
     width: 100%;
-    background: url('/build/images/angles_1-01.png') no-repeat;
-    z-index: 4;
+    background-image: url('/build/images/angles_1-01.png');
+    background-repeat: no-repeat;
     background-size: 100% 100%;
+    z-index: 4;
     height: 95px;
     display: block;
   }
-}
-
-.panel-three:after {
-  background: url('/build/images/angles_2-01.png') no-repeat;
 }
 
 .word-bg {
@@ -46,10 +54,8 @@
 }
 
 .word-copy {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-top: -60px;
+  background-color: $beige;
 }
 
 .panel-two, .panel-three, .panel-four, .panel-five {
@@ -63,9 +69,45 @@
 .panel-three {
     background: url('/build/images/wedo.jpg') no-repeat;
     background-size: cover;
+    min-height: 500px;
+
+    h2 {
+      color: $white;
+    }
+
+    &:after {
+      top: -3px;
+      background-image: url('/build/images/angles_2-01.png');
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100%;
+      // background-image: url('/build/images/angles_3-01.png');
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+      z-index: 4;
+      height: 95px;
+      display: block;
+    }
 }
 
 .panel-four {
-  background-color: $beige;
+  background-color: $beige2;
   color: $white;    
+}
+
+.panel-five {
+  line-height: 1.5em;
+  background-color: $white;
+  color: $contact-body-copy;
+  h2 {
+    color: $slate;
+  }
+  p {
+    margin: 0;
+  }
 }

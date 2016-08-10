@@ -2,6 +2,33 @@
     box-sizing: border-box;
 }
 
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
 h1, h2, h3 {
     text-transform: uppercase;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+}
+
+a {
+    color: $link;
+    &:hover {
+        color: #01303f;
+    }
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2.125rem;
+}
+
+h3 {
+    font-size: 1.75rem;
 }
