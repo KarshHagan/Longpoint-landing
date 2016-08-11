@@ -48,5 +48,14 @@ ChangeScrollSpeed.prototype.updatePosition = function(windowTop) {
             '-ms-transform': _translateString,
             'transform': _translateString,
         });
-    } 
+    }
 };
+
+(function(){
+  if($(window).width() >= 900 && !Modernizr.touch) {
+    $(window).on('scroll', function() {
+      var changeScrollSpeed = new ChangeScrollSpeed();
+      changeScrollSpeed.updatePosition($(window).scrollTop());
+    });
+  }
+})();
