@@ -17,7 +17,7 @@ var paths = {
 // minify JS
 gulp.task('compress', function(callback) {
   pump([
-      gulp.src(paths.source + 'javascripts/main.js'),
+      gulp.src(paths.source + 'javascripts/**/*.js'),
       uglify(),
       gulp.dest(paths.dest + 'javascripts')
     ],
@@ -56,7 +56,7 @@ gulp.task('smush', function() {
 // watch for changes in css and js then compile
 gulp.task('watch', function() {
   gulp.watch(paths.source + 'scss/**/*.scss', ['sass']);
-  gulp.watch(paths.source + 'javascripts/main.js', ['compress']);
+  gulp.watch(paths.source + 'javascripts/**/*.js', ['compress']);
   gulp.watch('**/*.html', ['html']);
 });
 
