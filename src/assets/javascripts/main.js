@@ -1,10 +1,14 @@
 var Main = {
 
   init: function() {
-    var _this = this;
 
+    // variables
+    var _this = this;
+    this.$contact = $('[href="#contact"]');
+    this.$wordImg = $('.ourword-mobile-img');
     this.$categoryMenuItems = $('.scroll-link');
     this.$categoryMenuHeight = $('nav').outerHeight() + 13;
+    this.wasNavItemClicked = false;
     this.$scrollItems = this.$categoryMenuItems.map(function() {
       var item = $($(this).attr('href'));
       if(item.length) {
@@ -12,31 +16,31 @@ var Main = {
       }
     });
 
+    // init functions
     this.$categoryMenuItems.on('click', function(e) {
-      _this.navScrollTo(e);
+      _this.navClickScrollTo(e);
     });
-
     this.desktopImages();
     this.navActiveOnScroll();
     this.handleWindowScroll();
+    this.handleDownArrowClick();
     $(window).on('resize', function() {
       _this.handleWindowResize();
     });
-
-    this.wasNavItemClicked = false;
   },
 
-  navScrollTo: function(e) {
-    $this = $(e.currentTarget),
-    target = $this.attr('href'),
-    gotoTarget = $(target);
+  navClickScrollTo: function(e) {
     e.preventDefault();
     var _this = this;
+    var target = $(e.currentTarget).attr('href');
+    
     this.wasNavItemClicked = true;
-    $('.scroll-link').removeClass('active');
-    $(this).addClass('active');
+    this.$categoryMenuItems.removeClass('active');
+
+    $(e.currentTarget).addClass('active');
+    
     $('body, html').animate({
-      scrollTop: gotoTarget.offset().top.toFixed(0) - 2
+      scrollTop: $(target).offset().top.toFixed(0) - 2
     }, 250, function() {
       _this.wasNavItemClicked = false;
     });
@@ -45,7 +49,10 @@ var Main = {
 
   navActiveOnScroll: function() {
     var currentScrollTop = $(document).scrollTop();
+    var pageHeight = $(document).height() - $(window).height();
     var _fromTop = currentScrollTop + this.$categoryMenuHeight;
+
+    // figure out if the panel is in our range. 
     var _currentItem = this.$scrollItems.map(function() {
       if($(this).offset().top < _fromTop) {
         return this;
@@ -57,8 +64,12 @@ var Main = {
 
     this.$categoryMenuItems.removeClass("active").filter("[href=#"+_id+"]").addClass("active");
     
-    if(currentScrollTop <= 100) {
-      $('[href="#intro"]').addClass('active');
+    // add active class to nave when you hit bottom of page
+    if((pageHeight - 100) <= currentScrollTop) {
+      this.$categoryMenuItems.removeClass('active');
+      this.$contact.addClass('active');
+    } else {
+      this.$contact.removeClass('active');
     }
   },
 
@@ -72,11 +83,18 @@ var Main = {
     });
   },
 
+  handleDownArrowClick: function() {
+    $('.down-arrow').on('click', function(e) {
+      e.preventDefault();
+      $('.arrow-down-click').trigger('click');
+    });
+  },
+
   desktopImages: function() {
     if($(window).width() >= 830) {
-      $('.ourword-mobile-img').attr('src', 'build/images/ourword_type2.png');
+      this.$wordImg.attr('src', 'build/images/ourword_type2.png');
     } else {
-      $('.ourword-mobile-img').attr('src', 'build/images/ourword_type2-mobile.png');
+      this.$wordImg.attr('src', 'build/images/ourword_type2-mobile.png');
     }
   },
 
