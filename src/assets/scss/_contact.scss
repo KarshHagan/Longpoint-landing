@@ -1,0 +1,36 @@
+.basin-list {
+    h4 {
+        text-transform: uppercase;
+    }
+    p {
+        height: 90%;
+        padding: 0 1.5rem;
+    }
+    div {
+        margin-bottom: 3rem;
+        position: relative;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        @media(min-width: 40rem) {
+            padding-left: 0;
+            padding-right: 0;
+            margin-bottom: 0;
+        }
+         &:after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            width: 65%;
+            height: 1px;
+            background-color: black;
+            left: 50%;
+            @include transform(translateX(-50%));
+        }
+    }
+
+}
+
+.px5 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+}

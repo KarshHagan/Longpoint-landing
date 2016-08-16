@@ -12,6 +12,12 @@
 
 .card-bottom {
   position: relative;
+  @media(min-width: 52em) {
+    min-height: 385px;
+  }
+  @media(min-width: 57em) {
+    min-height: 340px;
+  }
   &:after {
     position: absolute;
     content: '';

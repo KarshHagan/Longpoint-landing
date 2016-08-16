@@ -6,6 +6,7 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3 {
@@ -21,12 +22,12 @@ a {
     }
 }
 
-h1 {
-    font-size: 2.5rem;
+h1, .h1 {
+    font-size: 2.75rem;
 }
 
 h2 {
-    font-size: 2.125rem;
+    font-size: 2.25rem;
 }
 
 h3 {
@@ -35,4 +36,15 @@ h3 {
 
 .max-width-5 {
     max-width: 75rem;
+}
+
+.blue-text {
+    color: $blue-text;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+}
+
+.line-height {
+    line-height: 1.5em;
+    letter-spacing: 0.04em;
 }

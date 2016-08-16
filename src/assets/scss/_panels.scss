@@ -86,7 +86,7 @@
 }
 
 .panel-three {
-  background-color: #73B4C6;
+  background-color: $seafoam;
   color: $white;
   min-height: 600px;
   padding-bottom: 7rem;
@@ -136,6 +136,7 @@
     color: $slate;
   }
   p {
-    margin: 0;
+    margin-top: 0;
+    margin-bottom: 0;
   }
 }
