@@ -19,9 +19,6 @@ function ChangeScrollSpeed() {
 
     // min window top
     this.minWindowTop = parseInt(this.containerOffsetTop) - parseInt($(window).height());
-    if(this.minWindowTop <= 0) {
-        this.minWindowTop = 6;
-    }
 
     // max window top
     this.maxWindowTop = parseInt(this.containerOffsetTop) + parseInt(this.containerHeight);
@@ -35,10 +32,8 @@ function ChangeScrollSpeed() {
 }
     
 ChangeScrollSpeed.prototype.updatePosition = function(windowTop) {
-
     if(windowTop > this.minWindowTop && windowTop < this.maxWindowTop) {
-        // console.log('hi');
-        var pct = (windowTop * 3 - this.minWindowTop) / this.activeRange;
+        var pct = (windowTop * 2.25 - this.minWindowTop) / this.activeRange;
         var move = (this.imageHeightMinusContainerHeight * pct) - this.imageHeightMinusContainerHeight;
 
         var _translateString = "translate3d(0px," + -move.toFixed(2) + "px, 0px)";
@@ -51,11 +46,12 @@ ChangeScrollSpeed.prototype.updatePosition = function(windowTop) {
     }
 };
 
-(function(){
+$(window).load(function() {
   if($(window).width() >= 900 && !Modernizr.touch) {
+    var changeScrollSpeed = new ChangeScrollSpeed();
+    changeScrollSpeed.updatePosition($(window).scrollTop());
     $(window).on('scroll', function() {
-      var changeScrollSpeed = new ChangeScrollSpeed();
       changeScrollSpeed.updatePosition($(window).scrollTop());
     });
   }
-})();
+});

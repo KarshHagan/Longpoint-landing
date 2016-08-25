@@ -10,7 +10,7 @@ nav {
     margin: 20px 10px;
     cursor: pointer;
     a {
-      color: #475760;
+      color: $nav-light;
       text-decoration: none;
       font-size: 15px;
     }
@@ -22,18 +22,19 @@ nav {
   height: 17px;
   display: block;
   border-radius: 25px;
-  border: 2px solid $dot;
+  border: 2px solid $nav-light;
   float: left;
   margin-right: 10px;
   margin-top: 2px;
+  background-color: transparent;
 }
 
 .active {
   a {
-    color: $dot;
+    color: $nav-light;
   }
   .dot {
-    background-color: $dot;
+    background-color: $nav-light;
   }
 }
 

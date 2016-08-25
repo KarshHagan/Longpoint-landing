@@ -17,6 +17,8 @@ var Main = {
     });
 
     // init functions
+    this.noflexbox();
+    this.fadeInBody();
     this.$categoryMenuItems.on('click', function(e) {
       _this.navClickScrollTo(e);
     });
@@ -26,6 +28,15 @@ var Main = {
     this.handleDownArrowClick();
     $(window).on('resize', function() {
       _this.handleWindowResize();
+    });
+    this.navColorChange($(window).scrollTop());
+  },
+
+  fadeInBody: function() {
+    $(window).load(function() {
+      setTimeout(function() {
+        $('#loader').fadeOut(350);
+      }, 300);
     });
   },
 
@@ -80,6 +91,7 @@ var Main = {
       if(_this.wasNavItemClicked == false) {
         _this.navActiveOnScroll();
       }
+      _this.navColorChange($(window).scrollTop());
     });
   },
 
@@ -100,6 +112,43 @@ var Main = {
 
   handleWindowResize: function() {
     this.desktopImages();
+  }, 
+  
+  noflexbox: function() {
+    if($('html').hasClass('no-flexbox')) {
+      console.log('flex');
+      $('.basin-list').addClass('flex-free');
+    }
+  },
+
+  navColorChange: function(winScrollTop) {
+    var _this = this;
+
+    var light = function() {
+      _this.$categoryMenuItems.css('color', '#e8e9ea').find('.dot').css('border-color', '#e8e9ea');
+      $('.dot').css('background-color', 'transparent');
+      $('.active .dot').css('background-color', '#e8e9ea');
+    };
+
+    var dark = function() {
+      _this.$categoryMenuItems.css('color', '#3d4b56').find('.dot').css('border-color', '#3d4b56');
+      $('.dot').css('background-color', 'transparent');
+      $('.active .dot').css('background-color', '#3d4b56');
+    };
+
+    var section2LightTop = $('.panel-two').offset().top - $('nav').height();
+    var section2LightBottom = section2LightTop + $('.panel-two').height();
+    var section5LightTop = $('.panel-five').offset().top - $('nav').height();
+    var section5LightBottom = section5LightTop + $('.panel-five').height();
+
+    if(winScrollTop >= section2LightTop && winScrollTop <= section2LightBottom) {
+      dark();
+    } else if(winScrollTop >= section5LightTop && winScrollTop <= section5LightBottom) {
+      dark();
+    } else {
+      light();
+    }
+
   }
 
 };

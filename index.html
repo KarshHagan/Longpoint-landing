@@ -6,7 +6,8 @@
     <meta name="description" content="#">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Longpoint Minerals</title>
-    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+
+
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -24,6 +25,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -48,13 +50,26 @@
 
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700|Oswald:300,400' rel='stylesheet' type='text/css'>
-    
-    <!-- <link rel="stylesheet" href="node_modules/basscss/css/basscss.min.css"> -->
 
     <link rel="stylesheet" type="text/css" href="build/styles/main.css">
 
   </head>
   <body>
+    <div id="loader">
+      <div class="loader-wrap col-5 sm-col-3 md-col-3 mx-auto mt3 mb3">
+        <img src="/build/images/logo-blk.svg" alt="Longpoint Minerals Logo" class="fit"/>
+        <svg width="50" height="50" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" stroke="#00a8e2">
+              <g fill="none" fill-rule="evenodd">
+                  <g transform="translate(1 1)" stroke-width="2">
+                      <circle stroke-opacity=".5" cx="18" cy="18" r="18"></circle>
+                      <path d="M36 18c0-9.94-8.06-18-18-18" transform="rotate(311.998 18 18)">
+                          <animateTransform attributeName="transform" type="rotate" from="0 18 18" to="360 18 18" dur="1s" repeatCount="indefinite"></animateTransform>
+                      </path>
+                  </g>
+              </g>
+          </svg>
+      </div>
+    </div>
 <!--     <script>
       var password = prompt("Please enter your password", "");
       if (password !== 'LPmin' || password == null) {
@@ -67,7 +82,7 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <nav class="xs-hide sm-hide md-hide">
+    <nav class="xs-hide sm-hide md-hide ml1">
       <ul class="list-reset">
         <li><a href="#intro" class="scroll-link"><span class="dot"></span>Introduction</a></li>
         <li><a href="#our-word" class="scroll-link arrow-down-click"><span class="dot"></span>What We&lsquo;re About</a></li>
@@ -76,15 +91,15 @@
       </ul>
     </nav>
 
-    <section class="panel panel-one clearfix center pt2" id="intro">
+    <section class="panel panel-one clearfix center pt2 pb4" id="intro">
       <div class="max-width-4 mx-auto">
         <div class="sm-col-12 px2 mb3 pb1">
           <div class="logo-wrap pb2 col-7 sm-col-3 md-col-4 mx-auto mt3">
             <img src="/build/images/longpoint-logo.svg" alt="Longpoint Minerals Logo" class="fit"/>
           </div>
-          <h1 class="px1 ml3 mr3 mb0">Delivering Value. Uncovering Possibilities.</h1>
-          <h2 class="h4 blue-text mt0 mb3 pb1 bold">A different approach to buying mineral interests</h2>
-          <p class="max-width-3 mx-auto line-height">LongPoint Minerals is a company focused specifically on the purchase of mineral interests in three key US Basins: the Mid-Continent, Permian and Denver-Julesburg. With a highly experienced management team and decades of oil and gas experience, LongPoint Minerals takes an entirely different approach to working with mineral owners to present an offer that’s right for you. That’s how we find value that others miss.</p>
+          <h1 class="px1 ml2 mr2 mb1">Delivering Value. Uncovering Possibilities.</h1>
+          <h2 class="h4 blue-text mt0 mb3 pb1 bold px4">A different approach to buying mineral interests</h2>
+          <p class="max-width-4 px1 mx-auto line-height">LongPoint Minerals is a company focused specifically on the purchase of mineral interests in three key US Basins: the Mid-Continent, Permian and Denver-Julesburg. With a highly experienced management team and decades of oil and gas experience, LongPoint Minerals takes an entirely different approach to working with mineral owners to present an offer that’s right for you. That’s how we find value that others miss.</p>
         </div>
         <a href="#our-word" class="down-arrow inline-block mb4 mx-auto"><img src="/build/images/down-arrow.svg" class="mb3" /></a>
       </div>
@@ -95,7 +110,7 @@
       <img src="build/images/ourword_type2-mobile.png" alt="Longpoint Minerals" class="ourword-mobile-img"/>
       <div class="word-copy-wrap">
         <div class="max-width-3 mx-auto px2 pb4">
-          <p class="line-height">Building on a reputation of doing what we say we are going to do, LongPoint Minerals is committed to respect and integrity. Choosing to sell your mineral rights is often a big decision. When you work with LongPoint Minerals, you will quickly see we have a commitment to keeping our word. Our simple process makes you, the mineral owner, feel respected and confident while selling mineral, oil and gas rights.</p>
+          <p class="line-height mxn1">Building on a reputation of doing what we say we&rsquo;re going to do, LongPoint Minerals has a standard of working alongside mineral owners with respect and integrity. Choosing to sell your mineral rights is often a big decision. When you work with LongPoint Minerals, you will quickly see we have a commitment to keeping our word. We follow through with a process that is simple and seamless but more importantly makes you, the mineral owner, feel respected and confident in your decision to sell.</p>
         </div>
       </div>
     </section>
@@ -105,7 +120,7 @@
         <h2 class="h1 mt4 pt4 pr2 pl2">Our Process</h2>
         <div class="card col sm-col-12 md-col-4 mb3 px2">
           <div class="inner blue-gray shadow-border">
-            <img src="/build/images/plane.jpg" class="fit"/>
+            <img src="/build/images/tech2.jpg" class="fit"/>
             <div class="card-bottom">
               <h3 class="px3">Technical Evaluation</h3>
               <p class="pl3 pr3 pb3 line-height">We don’t just give blanket valuations based on past sales. LongPoint’s geologists and engineers use a proprietary technical evaluation process to determine the best value for your mineral rights.</p>
@@ -114,7 +129,7 @@
         </div>
         <div class="card col sm-col-12 md-col-4 mb3 px2">
           <div class="inner brown-gray shadow-border">
-            <img src="/build/images/plane.jpg" class="fit"/>
+            <img src="/build/images/communication.jpg" class="fit"/>
             <div class="card-bottom">
               <h3 class="px1">Straightforward Communication</h3>
               <p class="pl3 pr3 pb3 line-height">Our valuations and offers are straightforward and easy to understand. You’ll work with a real person who is there to answer questions and will walk you through each step of the sales process.</p>
@@ -123,7 +138,7 @@
         </div>
         <div class="card col sm-col-12 md-col-4 mb3 px2">
           <div class="inner caramel shadow-border">
-            <img src="/build/images/plane.jpg" class="fit"/>
+            <img src="/build/images/transition.jpg" class="fit"/>
             <div class="card-bottom">
               <h3 class="px4">Quick Transition</h3>
               <p class="pl3 pr3 pb3 line-height">With strong financial backing, LongPoint Minerals has the resources to follow through with our offer. We avoid contract extensions and eliminate uncertainty with our ability to close sales and pay quickly.</p>
@@ -146,18 +161,17 @@
             </div>
             <div class="sm-col-6 md-col-4">
               <h4 class="m0">Permian Basin:</h4>
-              <p>Western Texas and Southeastern New Mexico</p>
+              <p>(Midland &amp; Delaware Basins) West Texas and Southeast New Mexico</p>
             </div>
             <div class="sm-col-6 md-col-4">
               <h4 class="m0">Denver-Julesburg Basin:</h4>
-              <p>Eastern Colorado, Southeastern Wyoming, Western Kansas, Western Nebraska</p>
+              <p>East Colorado, Southeast Wyoming, West Kansas, West Nebraska</p>
             </div>
           </div>
-          <p class="pt3 pb1 max-width-3 mx-auto">If you are interested in selling all or a portion of your mineral interest, please contact LongPoint Minerals directly for additional information.</p>
-          <div>
+          <p class="pt3 pb3 max-width-3 mx-auto interested bold">If you are interested in selling all or a portion of your mineral rights, please contact LongPoint Minerals directly for additional information.</p>
+          <div class="contact-info">
             <p class="bold">LongPoint Minerals, LLC</p>
-            <p>100 St. Paul Street, Ste. 400</p>
-            <p>Denver, CO 80206</p>
+            <p>100 St. Paul Street, Ste. 400 | Denver, CO 80206</p>
             <p>Phone:  303.290.0990</p>
             <p>Fax:  303.290.9997</p>
             <p>Email: <a href="mailto:info@longpointminerals.com">info@longpointminerals.com</a></p>

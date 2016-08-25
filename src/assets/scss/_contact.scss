@@ -27,10 +27,27 @@
             @include transform(translateX(-50%));
         }
     }
-
 }
 
 .px5 {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
+}
+
+.contact-info {
+    .bold {
+        text-transform: uppercase;
+    }
+    a {
+        text-decoration: none;
+        color: $blue-text;
+        font-weight: 700;
+    }
+}
+
+.flex-free {
+    display: table;
+    div.sm-col-6 {
+        float: left;
+    }
 }

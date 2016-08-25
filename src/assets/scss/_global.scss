@@ -6,7 +6,34 @@
 body {
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 400;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing: antialiased;    
+}
+
+#loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 123;
+    background-color: #fff;
+    svg {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        margin-top: -25px;
+        margin-left: -25px;
+        margin-bottom: -75px;
+        z-index: 99;
+    }
+}
+
+.loader-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  @include transform(translate(-50%, -50%));  
 }
 
 h1, h2, h3 {
@@ -41,7 +68,8 @@ h3 {
 .blue-text {
     color: $blue-text;
     text-transform: uppercase;
-    letter-spacing: 0.75px;
+    letter-spacing: 1.75px;
+    font-size: 1.125em;
 }
 
 .line-height {

@@ -18,13 +18,14 @@
 }
 .panel-one {
   background: rgba(99,126,146,1);
-  background: -moz-linear-gradient(top, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(99,126,146,1)), color-stop(13%, rgba(99,126,146,1)), color-stop(64%, rgba(99,126,146,1)), color-stop(88%, rgba(87,100,111,1)), color-stop(98%, rgba(82,89,96,1)));
-  background: -webkit-linear-gradient(top, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
-  background: -o-linear-gradient(top, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
-  background: -ms-linear-gradient(top, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
-  background: linear-gradient(to bottom, rgba(99,126,146,1) 0%, rgba(99,126,146,1) 13%, rgba(99,126,146,1) 64%, rgba(87,100,111,1) 88%, rgba(82,89,96,1) 98%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#637e92', endColorstr='#525960', GradientType=0 );
+
+
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#637e91+0,092d40+100 */
+  background: #637e91; /* Old browsers */
+  background: -moz-linear-gradient(top,  #637e91 0%, #092d40 100%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(top,  #637e91 0%,#092d40 100%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to bottom,  #637e91 0%,#092d40 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#637e91', endColorstr='#092d40',GradientType=0 ); /* IE6-9 */
   color: $white;
   z-index: 6;
   &:after {
@@ -34,6 +35,9 @@
   @media (min-width: 52em) {
     padding-top: 4rem;
   }
+  h1 {
+    line-height: 1.125;
+  }
 }
 .logo-wrap {
   @media (min-width: 52em) {
@@ -41,7 +45,7 @@
   }
 }
 .down-arrow {
-  max-width: 45px;
+  max-width: 40px;
   width: 100%;
 }
 
@@ -57,17 +61,18 @@
 }
 
 .img-move {
-  background-image: url('/build/images/handshake-mobile.jpg');
+  background-image: url('/build/images/word-final-mobile.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   position: absolute;
-  top: -75px;
+  top: -35%;
+  left: 0;
   width: 100%;
-  height: 600px;
+  height: 100%;
   z-index: -1;
   @media (min-width: 52em) {
-    background-image: url('/build/images/handshake2.jpg');
-    background-position-x: 80px;
+    background-image: url('/build/images/word-final.jpg');
+    top: -21%;
     height: 800px;
   }
 }
@@ -139,4 +144,8 @@
     margin-top: 0;
     margin-bottom: 0;
   }
+}
+
+.interested {
+  color: $blue-text;
 }

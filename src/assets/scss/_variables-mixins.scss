@@ -7,9 +7,11 @@ $link: #0078a7;
 $hover: #00263a;
 $slate: #637f92;
 $contact-body-copy: #002539;
-$dot: #3d4b56;
+// $nav-dark: #3d4b56;
 $blue-text: #73b3c5;
 $seafoam: #a5c6ce;
+$nav-light: #e8e9ea;
+$nav-dark: #3d4b56;
 
 @mixin transform($var...) {
     -webkit-transform: $var;
